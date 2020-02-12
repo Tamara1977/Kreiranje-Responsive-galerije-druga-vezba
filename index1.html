@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html.lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS -Kreiranje responsive galerije</title> 
+<style>
+    body {
+        margin: 0;     
+    }
+    #wrapper {
+        margin:0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(120px, auto));
+        grid-auto-rows: minmax(120px, auto);
+        grid-gap: 16px;
+        max-width: 1200px;
+        width: 90%;
+        justify-items: center;
+        font-family: sans-serif;
+    }
+   .placeholder {
+       max-width: 120px;
+       background-color: rgb(135, 122, 245);
+       grid-row-start: 2;
+       border-radius: 15px;
+   }
+   #box {
+       padding-top: 20px;    
+   }
+   #box p {
+       display: grid;
+       position: relative;
+       text-align: center;
+       bottom: 20px;
+       background-color: cornsilk;
+       border-radius: 5px;
+   }
+   .loremipsum {
+       text-align: justify;
+       max-width: 1100px;
+       margin: 0 auto;
+       padding: 22px;       
+   }
+   .title {    
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, auto));
+    grid-gap: 16px;
+    max-width: 1200px;
+    width: 90%;
+    font-family: sans-serif;
+    justify-items: center;  
+   }
+   h3 { 
+       padding-top: 15px;
+       max-width: 147px;
+       grid-column: 1 / 1;
+   }
+   @media screen and (min-width: 1201px)  {
+        #wrapper {
+           grid-template-columns: repeat(5, 1fr);
+        }    
+    }
+    @media screen and (min-width:961px) and (max-width: 1023px) {
+        #wrapper {
+           grid-template-columns: repeat(4, 1fr);
+        }    
+    }
+    @media screen and (min-width:767px) and (max-width: 960px) {
+        #wrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }    
+    }    
+    @media screen and (min-width:414px) and (max-width: 766px) {
+        #wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }    
+    }    
+    @media screen and (max-width: 414px) {
+        #wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            width: 60%;
+        }         
+    }   
+    @media screen and (min-width: 1201px)  {
+        .title {
+           grid-template-columns: repeat(5, 1fr);
+        }    
+    }
+    @media screen and (min-width:961px) and (max-width: 1023px) {
+       .title {
+           grid-template-columns: repeat(4, 1fr);
+        }    
+    }
+    @media screen and (min-width:767px) and (max-width: 960px) {
+        .title {
+            grid-template-columns: repeat(3, 1fr);
+        }    
+    }    
+    @media screen and (min-width:414px) and (max-width: 766px) {
+        .title {
+            grid-template-columns: repeat(2, 1fr);
+        }    
+    }    
+    @media screen and (max-width: 414px) {
+        .title {
+            grid-template-columns: repeat(1, 1fr);
+            width: 60%;
+        }         
+    }   
+</style>
+</head>
+<body>  
+    <div class="title"><h3>Gallery Heading</h3></div> 
+    <div id="wrapper">
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>  
+       <div id="box"><img src="placeholder-image.png" alt="picture1" class="placeholder"><p>Text image</p></div>
+    </div>               
+    <div class="loremipsum"><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos corrupti qui repudiandae 
+        distinctio nesciunt expedita beatae consequuntur, eius dolor nulla magni, deserunt enim! Quam aperiam earum porro 
+         corporis natus consectetur dolores sapiente, eius consequuntur cum animi voluptatem, fugit eum explicabo deserunt
+          eos possimus error? Ratione nostrum ipsa incidunt fugit. Ipsum!
+        Quam aperiam earum porro corporis natus consectetur dolores sapiente, eius consequuntur cum animi voluptatem, fugit
+         eum explicabo deserunt eos possimus error? Ratione nostrum ipsa incidunt fugit. Ipsum!</p></div>
+</body>
+</html>
